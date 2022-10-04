@@ -21,5 +21,6 @@ public class MainService : IMainService
         _stringInterpolationService.Number08();
         _stringInterpolationService.Number09();
         _stringInterpolationService.Number10();
+        _stringInterpolationService.Number11();
     }
 }

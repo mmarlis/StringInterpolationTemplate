@@ -4,6 +4,9 @@ using StringInterpolationTemplate.Utils;
 
 namespace StringInterpolationTemplate.Services;
 
+using System.IO.Pipes;
+using System.Text;
+
 public class StringInterpolationService : IStringInterpolationService
 {
     private readonly ISystemDate _date;
@@ -28,53 +31,96 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number02()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("yyyy.MM.dd");
+        var answer = $"{date}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number03()
     {
-        throw new NotImplementedException();
+        var date = _date.Now;
+        var answer = $"Day{date: dd 'of' MMMM, yyyy}";
+        Console.WriteLine(answer);
+
+        return answer;
+
     }
 
     public string Number04()
     {
-        throw new NotImplementedException();
+        var date = _date.Now;
+        var answer = $"{date:'Year: 'yyyy, 'Month: 'MM, 'Day: 'dd}";
+        Console.WriteLine(answer);
+
+        return answer;
+
     }
 
     public string Number05()
     {
-        throw new NotImplementedException();
+        var date = _date.Now;
+        var answer = $"{date,10:dddd}";
+
+
+        return answer;
     }
 
     public string Number06()
     {
-        throw new NotImplementedException();
+        var date = _date.Now;
+        var answer = $"{date,10:t}{date,10:dddd}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number07()
     {
-        throw new NotImplementedException();
+        var date = _date.Now;
+        var answer = $"{date:'h:'h, 'm:'mm, 's:'ss}";
+        Console.WriteLine(answer); //
+
+        return answer;
     }
 
     public string Number08()
     {
-        throw new NotImplementedException();
+        var date = _date.Now;
+        var answer = $"{date:yyyy.MM.dd.h.mm.ss}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number09()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        var answer = $"{pi:C}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number10()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        var answer = $"{pi,10:f3}"; //f3: outputs 3 decimal numbers  
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number11()
     {
-        throw new NotImplementedException();
-    }
+        var date = _date.Now;
+        int answer = Convert.ToInt32($"{date:yyyy}");
+        string hexValueYear = answer.ToString("X2");
+        Console.WriteLine(hexValueYear);
+        return hexValueYear;
 
-    //2.2019.01.22
+
+        //2.2019.01.22
+    }
 }
