@@ -4,7 +4,7 @@ This project is used to demonstrate the git Workflow Action and, specifically, t
 
 A7 - String Interpolation Tests
 
-Due Wednesday by 11:59pm Points 100 Submitting a website url
+
 * Use the StringInterpolationTemplateLinks to an external site. as a basis for this assignment.
 
 In case it wasn't clear, use the var date = _date.Now value in your code so it will be overridden by the tests.  See the Number01() method as an example if you are unsure.
